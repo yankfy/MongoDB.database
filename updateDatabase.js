@@ -38,7 +38,5 @@ let workMate3 = {
 var db = connect("company")
 
 let workMateArr = [workMate1,workMate2,workMate3]
-
 db.company.insert(workMateArr)
-
 print("[updateDatabase] This insert database is successful")
