@@ -38,7 +38,7 @@ var db = connect("company")
 // -1 从开始位置进行删除
 db.company.update({name:"Pony"},{$pop:{interest:1}})
 
-// 数组定位修改
+// 数组定位修改 非应答式操作
 db.company.update({name:"Pony"},{$set:{"interest.1":"README"}})
 
 print("[updateDatabase] This uodate database is successful")
