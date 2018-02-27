@@ -52,4 +52,4 @@ db.randomInfo.insert(tempInfo)
 // 结束时间
 var endTime = (new Date()).getTime() - startTime
 
-print("Insert 2000000" + endTime + "ms")
+print("Insert 2000000个数据" + endTime + "ms")
