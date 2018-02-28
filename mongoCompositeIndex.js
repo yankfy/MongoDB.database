@@ -7,9 +7,12 @@ var db = connect("company")
 
 // db.randomInfo.getIndexes()
 
+// hint 最先索引查询顺序
 var rs = db.randomInfo.find({
-    username:"9undefinedpsv2",
-    randNum0:62433
+    username: "9undefinedpsv2",
+    randNum0: 62433
+}).hint({
+    randNum0: 1
 })
 
 rs.forEach(el => {
@@ -19,3 +22,6 @@ rs.forEach(el => {
 var runTime = (new Date()).getTime() - startTime
 
 print("this run time" + runTime + "ms")
+
+// 删除索引数据 注意是内容
+// db.randomInfo.dropIndex('randNum0_1')
